@@ -1,0 +1,35 @@
+name: Build Release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt pyinstaller
+
+      - name: Build executable
+        run: pyinstaller --noconsole --onefile --add-data "logo.jpg;." --add-data "favicon.ico;." --icon="favicon.ico" --collect-all customtkinter nullbit.py
+
+      - name: Rename artifact
+        shell: pwsh
+        run: Move-Item dist/nullbit.exe dist/NullBit-${{ github.ref_name }}.exe
+
+      - name: Attach to release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/NullBit-*.exe

@@ -22,6 +22,8 @@
 - **Пакетная обработка**: Выбирайте десятки файлов за один раз и сохраняйте их в нужную директорию.
 - **Мультиязычность**: Поддержка Русского, Английского и Сербского языков "на лету" без перезагрузки.
 - **Безопасность**: Программа никогда не перезаписывает оригиналы, создавая копии с постфиксом `_nullbit`.
+- **Правильная ориентация**: EXIF-поворот «запекается» в пиксели перед очисткой — вертикальные фото не переворачиваются.
+- **Устойчивость к ошибкам**: Повреждённый файл не останавливает пакетную обработку — он пропускается и учитывается в итоге.
 - **Современный UI**: Минималистичный и приятный интерфейс на базе `customtkinter`.
 
 ## 📦 Установка и запуск
@@ -32,7 +34,7 @@
 
 1. Склонируйте репозиторий:
 ```bash
-git clone [https://github.com/vadhorvad/NullBit.git](https://github.com/vadhorvad/NullBit.git)
+git clone https://github.com/vadhorvad/NullBit.git
 cd NullBit
 ```
 
@@ -72,6 +74,8 @@ The program doesn't just erase EXIF tags; it physically transfers the pixel map 
 - **Batch Processing**: Select dozens of files at once and save them to a specified directory.
 - **Multilingual**: Supports English, Russian, and Serbian languages on the fly without restarting.
 - **Safety**: The program never overwrites original files, creating copies with the `_nullbit` suffix instead.
+- **Orientation-Safe**: The EXIF rotation is baked into the pixels before cleaning, so portrait photos never come out sideways.
+- **Fault-Tolerant**: A corrupted file doesn't stop the batch — it is skipped and counted in the summary.
 - **Modern UI**: Minimalistic and clean interface built on `customtkinter`.
 
 ## 📦 Installation & Usage
@@ -82,7 +86,7 @@ You can download the pre-compiled `.exe` file from the [Releases](https://github
 
 1. Clone the repository:
 ```bash
-git clone [https://github.com/vadhorvad/NullBit.git](https://github.com/vadhorvad/NullBit.git)
+git clone https://github.com/vadhorvad/NullBit.git
 cd NullBit
 ```
 
@@ -122,6 +126,8 @@ Program ne briše samo EXIF oznake, već fizički prenosi mapu piksela na novo v
 - **Grupna obrada**: Izaberite desetine fajlova odjednom i sačuvajte ih u izabrani folder.
 - **Višejezičnost**: Podrška za srpski, engleski i ruski jezik u hodu, bez potrebe za ponovnim pokretanjem programa.
 - **Bezbednost**: Program nikada ne prepisuje originale, već stvara kopije sa sufiksom `_nullbit`.
+- **Bezbedna orijentacija**: EXIF rotacija se ugrađuje u piksele pre čišćenja, pa uspravne slike nikada ne izađu okrenute.
+- **Otpornost na greške**: Oštećen fajl ne zaustavlja grupnu obradu — preskoči se i prebroji.
 - **Moderan UI**: Minimalistički interfejs zasnovan na `customtkinter` biblioteci.
 
 ## 📦 Instalacija i pokretanje
@@ -132,7 +138,7 @@ Možete preuzeti već spreman, kompajliran `.exe` fajl u sekciji [Releases](http
 
 1. Klonirajte repozitorijum:
 ```bash
-git clone [https://github.com/vadhorvad/NullBit.git](https://github.com/vadhorvad/NullBit.git)
+git clone https://github.com/vadhorvad/NullBit.git
 cd NullBit
 ```
 
